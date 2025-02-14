@@ -1,4 +1,6 @@
 // Importar express y pg
+require('dotenv').config();
+
 const express = require('express');
 const { Client } = require('pg');
 const path = require('path');
@@ -10,7 +12,7 @@ app.use(express.json());
 
 // Crear la configuración de la conexión con PostgreSQL
 const client = new Client({
-  connectionString: 'postgresql://neondb_owner:npg_U0eibxfN1LQs@ep-red-fire-a8rb0lt3-pooler.eastus2.azure.neon.tech/nodejs?sslmode=require',
+  connectionString: process.env.DATABASE_URL,
 });
 
 // Conectar a la base de datos
