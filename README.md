@@ -7,4 +7,10 @@ ubicate en la carpeta raiz donde esta app.js
 
 en el terminal colocar:
 
+    npm init -y
+
+    npm install express
+
     node app.js
+
+    
